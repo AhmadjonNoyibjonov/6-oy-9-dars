@@ -35,9 +35,16 @@ function Product() {
     const productToSave = {
       ...product,
       count: counterState,
-    };
-    localStorage.setItem("product", JSON.stringify(productToSave));
-    alert("Product saved successfully!");
+    }
+
+    let productGet = [];
+  if (localStorage.getItem("products")) {
+    productGet = JSON.parse(localStorage.getItem("products"));
+  }
+
+  productGet.push(productToSave);
+  localStorage.setItem("products", JSON.stringify(productGet));
+  alert("Product saved successfully!");
   }
 
   return (
