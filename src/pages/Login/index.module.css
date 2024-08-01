@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;800;900&display=swap);
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  max-width: 600px;
+  height: 500px;
+  width: 100%;
+  margin: 100px auto;
+}
+
+.form {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(107, 142, 35, 0.8);
+}
+
+.form h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+  color: rgb(248, 146, 12);
+}
+
+.form h2 .link {
+  background-color: aqua;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 1s;
+}
+
+.form h2 .link:hover {
+  background-color: rgb(4, 158, 158);
+  transform: rotateX(360deg);
+}
+
+.form input {
+  outline: none;
+  width: 90%;
+  margin: 0px auto;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: aquamarine;
+  color: rgb(85, 10, 10);
+  font-size: 20px;
+}
+
+.form button {
+  margin-bottom: 20px;
+  width: 60%;
+  margin: auto;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 600;
+  background-color: blue;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.form button:hover {
+  background-color: rgb(4, 4, 138);
+  color: azure;
+}
