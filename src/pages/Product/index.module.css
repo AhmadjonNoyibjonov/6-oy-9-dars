@@ -2,7 +2,8 @@
   display: flex;
   border: 1px solid #ababab;
   box-shadow: 1px 1px 15px 10px rgba(0, 0, 0, 0.5);
-  width: 700px;
+  width: 710px;
+  height: 600px;
   margin: 150px auto;
   padding: 30px;
   border-radius: 6px;
@@ -66,7 +67,7 @@ h3 {
   color: white;
   border: none;
   border-radius: 5px;
-  left: 500px;
+  left: 570px;
   cursor: pointer;
   font-size: 20px;
   font-weight: 600;
@@ -78,4 +79,60 @@ h3 {
   background-color: rgb(58, 58, 3);
 }
 
+.counter {
+  width: 200px;
+  margin: auto;
+  margin-top: 50px;
+  background-color: aqua;
+  border-radius: 12px;
+  padding: 10px;
+}
 
+.counter span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.counter h2 {
+  text-align: center;
+  color: blue;
+  font-weight: 600;
+}
+
+.counter button {
+  margin: auto;
+  padding: 5px;
+  border-radius: 8px;
+  border: none;
+  background-color: aliceblue;
+  cursor: pointer;
+  color: brown;
+  font-weight: 600;
+  transition: all 1s;
+}
+
+.counter button:hover {
+  background-color: rgb(186, 184, 184);
+}
+
+.save {
+  width: 120px;
+  height: 40px;
+  top: 520px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  left: 430px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 1s;
+  position: absolute;
+}
+
+.save:hover {
+  background-color: rgb(2, 61, 2);
+}

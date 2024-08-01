@@ -19,6 +19,27 @@ function Product() {
     navigate("/");
   }
 
+  const [counterState, setCounterState] = useState(0);
+
+  function PlusClick() {
+    setCounterState(counterState + 1);
+  }
+
+  function MinusClick() {
+    if(counterState > 0) {
+      setCounterState(counterState - 1);
+    }
+  }
+
+  function saveClick() {
+    const productToSave = {
+      ...product,
+      count: counterState,
+    };
+    localStorage.setItem("product", JSON.stringify(productToSave));
+    alert("Product saved successfully!");
+  }
+
   return (
     <div className={styles.details}>
       <img src={product.image} alt="picture" />
@@ -30,7 +51,17 @@ function Product() {
           <p className={styles.price}>{product.oldPrice / 1000}₽</p>
         </span>
         <h3> Category:{product.category}</h3>
+        <div className={styles.counter}>
+          <span>
+            <button onClick={PlusClick}>count+</button>
+            <button onClick={MinusClick}>count-</button>
+          </span>
+          <h2>{counterState}</h2>
+        </div>
       </div>
+
+      <button className={styles.save}  onClick={saveClick}>SAVE</button>
+
       <button className={styles.canel} onClick={handleCanel}>
         Back{" "}
       </button>
