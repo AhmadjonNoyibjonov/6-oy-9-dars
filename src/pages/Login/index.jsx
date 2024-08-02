@@ -8,8 +8,32 @@ function Login() {
   const usernameRef = useRef("");
   const passwordRef = useRef("");
 
+  function validate(username, password) {
+    if (username.current.value.length < 3 && username.current.value == '') {
+      alert("Username must be at least 3 characters long");
+      username.current.focus();
+      username.current.style.outlineColor = "red";
+
+      return false;
+    }
+
+    if (password.current.value.length < 3 && password.current.value == '') {
+      alert("Password must be at least 3 characters long");
+      password.current.focus();
+      password.current.style.outlineColor = "red";
+
+      return false;
+    }
+    return true;
+  }
+
   function handleClick(event) {
     event.preventDefault();
+
+    const isValid = validate(usernameRef, passwordRef);
+    if (!isValid) {
+      return;
+    }
 
     const user = {
       username: usernameRef.current.value,

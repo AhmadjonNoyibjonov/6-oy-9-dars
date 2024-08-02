@@ -6,8 +6,8 @@ function Home() {
   const [products, setProduct] = useState([]);
   const [filterProducts, setFilterProducts] = useState([]);
   const Navigate = useNavigate();
-  const minPriceRef = useRef('');
-  const maxPriceRef = useRef('');
+  const minPriceRef = useRef("");
+  const maxPriceRef = useRef("");
 
   async function GetData(url) {
     try {
@@ -22,7 +22,6 @@ function Home() {
       console.log(error);
     }
   }
-
   useEffect(() => {
     GetData("https://cars-pagination.onrender.com/products")
       .then((data) => {
@@ -60,17 +59,16 @@ function Home() {
   }
 
   function handlePriceFilter(event) {
-    event.preventDefault()
+    event.preventDefault();
 
     const minPrice = parseFloat(minPriceRef.current.value) * 100 || 0;
     const maxPrice = parseFloat(maxPriceRef.current.value) * 100 || Infinity;
 
-    const filtered = products.filter(product => {
+    const filtered = products.filter((product) => {
       return product.newPrice >= minPrice && product.newPrice <= maxPrice;
     });
 
     setFilterProducts(filtered);
-    
   }
 
   return (
